@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    # 开发环境数据库配置
+    url: jdbc:mysql://localhost:33061/bocd_point?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+logging:
+  level:
+    com.example.demo: debug  # 开发环境日志级别
