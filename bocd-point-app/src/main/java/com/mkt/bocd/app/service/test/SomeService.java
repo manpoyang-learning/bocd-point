@@ -14,6 +14,6 @@ public class SomeService {
 
     public void someMethod() {
         // 模拟发生异常
-        throw new CommonException(400, "Invalid request data");
+        throw new CommonException(500, "Invalid request data");
     }
 }

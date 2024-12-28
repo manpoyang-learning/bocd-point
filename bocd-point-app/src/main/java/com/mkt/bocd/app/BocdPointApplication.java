@@ -1,15 +1,19 @@
 package com.mkt.bocd.app;
 
-/**
- * @author manpoyang
+/*
+  @author manpoyang
  * @version 1.0
  * @date 2024/12/27 19:56
  */
+
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@MapperScan("com.mkt.bocd.point.mapper")
+@ComponentScan(basePackages = {"com.mkt.bocd.*", "com.mkt.bocd.common", "com.mkt.bocd.infrastructure", "com.mkt.bocd.common", "com.mkt.bocd.domain"})
+@MapperScan("com.mkt.bocd.infrastructure.mapper")
 public class BocdPointApplication {
     public static void main(String[] args) {
         SpringApplication.run(BocdPointApplication.class, args);

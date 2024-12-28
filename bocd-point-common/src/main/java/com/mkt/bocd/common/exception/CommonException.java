@@ -1,5 +1,6 @@
 package com.mkt.bocd.common.exception;
 
+import com.mkt.bocd.common.constant.ResultCode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,44 +13,57 @@ import lombok.EqualsAndHashCode;
 @Data
 public class CommonException extends RuntimeException {
 
-    private static final long serialVersionUID = 8653090271840061986L;
-
     /**
-     * 异常码
+     * 错误码
      */
     private Integer code;
 
     /**
-     * 异常信息
+     * 错误信息
      */
-    private String info;
+    private String message;
 
-    public CommonException(Integer code) {
+    /**
+     * 所属模块
+     */
+    private String module;
+
+    public CommonException(String message) {
+        super(message);
+        this.code = ResultCode.UNKNOWN.getCode();
+    }
+
+    public CommonException(int code, String message) {
+        super(message);
         this.code = code;
     }
 
-    public CommonException(Integer code, Throwable cause) {
+    public CommonException(int code, String message, Throwable e) {
+        super(message, e);
         this.code = code;
-        super.initCause(cause);
     }
 
-    public CommonException(Integer code, String message) {
-        this.code = code;
-        this.info = message;
+    public CommonException(String message, String module) {
+        super(message);
+        this.module = module;
     }
 
-    public CommonException(Integer code, String message, Throwable cause) {
+    public CommonException(int code, String message, String module) {
+        super(message);
         this.code = code;
-        this.info = message;
-        super.initCause(cause);
+        this.module = module;
+    }
+
+    public CommonException(int code, String message, String module, Throwable e) {
+        super(message, e);
+        this.code = code;
+        this.module = module;
     }
 
     @Override
-    public String toString() {
-        return "cn.bugstack.x.api.types.exception.AppException{" +
-                "code='" + code + '\'' +
-                ", info='" + info + '\'' +
-                '}';
+    public String getMessage() {
+        return super.getMessage();
     }
+
 
 }

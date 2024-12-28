@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EasyCodeTableSetting">
+    <option name="tableInfoMap">
+      <map>
+        <entry key="bocd_point.address" value="eyJuYW1lIjoiQWRkcmVzcyIsInByZU5hbWUiOiIiLCJ0ZW1wbGF0ZUdyb3VwTmFtZSI6Ik15YmF0aXNQbHVzIiwiZnVsbENvbHVtbiI6W3sibmFtZSI6ImlkIiwiY29tbWVudCI6IuS4u+mUrklEIiwidHlwZSI6ImphdmEubGFuZy5Mb25nIiwiY3VzdG9tIjpmYWxzZSwiZXh0Ijoie30ifSx7Im5hbWUiOiJ1c2VySWQiLCJjb21tZW50Ijoi55So5oi3SUQiLCJ0eXBlIjoiamF2YS5sYW5nLkxvbmciLCJjdXN0b20iOmZhbHNlLCJleHQiOiJ7fSJ9LHsibmFtZSI6ImFkZHJlc3MiLCJjb21tZW50Ijoi5Zyw5Z2AIiwidHlwZSI6ImphdmEubGFuZy5TdHJpbmciLCJjdXN0b20iOmZhbHNlLCJleHQiOiJ7fSJ9XSwic2F2ZVBhY2thZ2VOYW1lIjoiY29tLm1rdC5ib2NkLmluZnJhc3RydWN0dXJlLmVudGl0eSIsInNhdmVQYXRoIjoiLi9ib2NkLXBvaW50LWluZnJhc3RydWN0dXJlL3NyYy9tYWluL2phdmEvY29tL21rdC9ib2NkL2luZnJhc3RydWN0dXJlL2VudGl0eSIsInNhdmVNb2RlbE5hbWUiOiJib2NkLXBvaW50LWluZnJhc3RydWN0dXJlIn0=" />
+      </map>
+    </option>
+  </component>
+</project>

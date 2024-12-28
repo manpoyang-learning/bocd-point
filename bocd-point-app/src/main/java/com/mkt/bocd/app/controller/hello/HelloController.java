@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mkt.bocd.common.response.Response;
+import com.mkt.bocd.common.response.ResponseResult;
 import com.mkt.bocd.app.service.test.SomeService;
 
 @Slf4j
@@ -25,15 +25,21 @@ public class HelloController {
     private SomeService someService;
 
     @GetMapping("/hello")
-    public Response<String> hello() {
+    public ResponseResult<?> hello() {
 
 
-        return Response.ok("Hello World!");
+        return ResponseResult.success("Hello World!");
     }
 
     @GetMapping("/test")
-    public Response<?> testService() {
+    public ResponseResult<?> testService() {
         throw new CommonException(400, "Invalid request data");
+    }
+
+    @GetMapping("/test2")
+    public ResponseResult<?> testService2() {
+        someService.someMethod();
+        return ResponseResult.success("Hello World!");
     }
 
 }
