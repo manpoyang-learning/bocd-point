@@ -1,5 +1,6 @@
 package com.mkt.bocd.app.service.user;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mkt.bocd.domain.dto.UserWithAddressDTO;
 import com.mkt.bocd.domain.mapstruct.UserAddressMapper;
 import com.mkt.bocd.infrastructure.entity.Address;
@@ -42,4 +43,13 @@ public class UserService {
 
         return userAddressMapper.toUserWithAddressDTO(user, address);
     }
+
+    public Page<User> getUsersByPage(int current, int size) {
+        Page<User> page = new Page<>(current, size);
+        // 分页查询
+
+        return userRepository.getBaseMapper().selectPage(page, null);
+    }
+
+
 }

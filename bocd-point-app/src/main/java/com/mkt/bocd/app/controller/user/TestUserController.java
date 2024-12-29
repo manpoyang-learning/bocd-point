@@ -1,13 +1,16 @@
 package com.mkt.bocd.app.controller.user;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mkt.bocd.app.service.user.UserService;
 import com.mkt.bocd.common.response.ResponseResult;
 import com.mkt.bocd.domain.dto.UserWithAddressDTO;
 import com.mkt.bocd.infrastructure.entity.User;
+import com.mkt.bocd.infrastructure.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -44,6 +47,16 @@ public class TestUserController {
         // 包装成统一的 ResponseResult
         return ResponseResult.success(userWithAddressDTO);  // 包装返回 User 数据
     }
+
+
+    @GetMapping("/users")
+    public ResponseResult<Page<User>> getUsers(@RequestParam("current") int current, @RequestParam("size") int size) {
+
+        return ResponseResult.success(userService.getUsersByPage(current, size));
+    }
+
+
+
 
 
 }

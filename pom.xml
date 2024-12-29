@@ -31,11 +31,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.7.18</spring-boot.version>
         <mybatis-plus.version>3.5.9</mybatis-plus.version>
-        <mysql.version>8.0.34</mysql.version>
+        <mysql.version>8.0.33</mysql.version>
         <lombok.version>1.18.24</lombok.version>
         <hutool.version>5.8.23</hutool.version>
         <fastjson2.version>2.0.40</fastjson2.version>
-        <org.mapstruct.version>1.6.3</org.mapstruct.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -56,6 +55,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-jsqlparser</artifactId>
+                <version>${mybatis-plus.version}</version> <!-- 确保版本和 MyBatis Plus 主包一致 -->
             </dependency>
 
             <!-- MySQL Connector -->
@@ -87,6 +91,10 @@
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.version}</version>
             </dependency>
+
+
+
+
 
 
 
