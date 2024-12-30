@@ -146,4 +146,12 @@ public class PointsService {
         recordRepository.save(record);
         return record;
     }
+
+    public PointsAccount getPointsByUserId(Long userId) {
+        return accountRepository.getByUserId(userId);
+    }
+
+
+
+
 }

@@ -1,14 +1,13 @@
 package com.mkt.bocd.app.controller.points;
 
 import com.mkt.bocd.app.service.points.PointsService;
+import com.mkt.bocd.common.constant.ResultCode;
 import com.mkt.bocd.common.response.ResponseResult;
 import com.mkt.bocd.domain.dto.points.PointsChangeDTO;
+import com.mkt.bocd.domain.entity.points.PointsAccount;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -34,5 +33,14 @@ public class PointsController {
     public ResponseResult<Void> decreasePoints(@RequestBody @Valid PointsChangeDTO dto) {
         pointsService.decreasePoints(dto);
         return ResponseResult.success("积分扣减成功");
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseResult<PointsAccount> getPoints(@PathVariable Long userId) {
+        PointsAccount pointsAccount = pointsService.getPointsByUserId(userId);
+        if (pointsAccount == null) {
+            return ResponseResult.fail(ResultCode.SERVICE_UNAVAILABLE.getCode(), "用户不存在");
+        }
+        return ResponseResult.success(pointsAccount);
     }
 }
