@@ -51,6 +51,10 @@ public class PointsAccountRepository extends CrudRepository<PointsAccountMapper,
     public PointsAccount getByUserId(Long userId) {
         // 先查缓存
         String key = POINTS_KEY_PREFIX + userId;
+
+
+
+
         PointsAccount pointsAccount = (PointsAccount) redisTemplate.opsForValue().get(key);
 
         if (pointsAccount != null) {
