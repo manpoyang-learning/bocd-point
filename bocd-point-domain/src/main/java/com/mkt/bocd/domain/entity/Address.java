@@ -1,10 +1,9 @@
-package com.mkt.bocd.infrastructure.entity;
+package com.mkt.bocd.domain.entity;
 
-import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 /**
  * (Address)表实体类
@@ -12,7 +11,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
  * @author manpoyang
  * @since 2024-12-28 16:59:29
  */
-@SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

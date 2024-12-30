@@ -1,4 +1,4 @@
-package com.mkt.bocd.infrastructure.entity.points;
+package com.mkt.bocd.domain.entity.points;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

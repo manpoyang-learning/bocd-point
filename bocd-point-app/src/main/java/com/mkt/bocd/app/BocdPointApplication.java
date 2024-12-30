@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.mkt.bocd.*", "com.mkt.bocd.common", "com.mkt.bocd.infrastructure", "com.mkt.bocd.common", "com.mkt.bocd.domain"})
-@MapperScan("com.mkt.bocd.infrastructure.mapper")
+@ComponentScan(basePackages = {"com.mkt.bocd.**"})
+@MapperScan("com.mkt.bocd.app.mapper")
 public class BocdPointApplication {
     public static void main(String[] args) {
         SpringApplication.run(BocdPointApplication.class, args);

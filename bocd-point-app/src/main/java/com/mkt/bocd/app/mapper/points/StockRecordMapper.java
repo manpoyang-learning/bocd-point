@@ -1,7 +1,7 @@
-package com.mkt.bocd.infrastructure.mapper.points;
+package com.mkt.bocd.app.mapper.points;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mkt.bocd.infrastructure.entity.points.StockRecord;
+import com.mkt.bocd.domain.entity.points.StockRecord;
 
 /**
  * @author manpoyang

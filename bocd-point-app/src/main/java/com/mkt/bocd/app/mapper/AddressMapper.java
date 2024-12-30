@@ -1,10 +1,7 @@
-package com.mkt.bocd.infrastructure.mapper;
+package com.mkt.bocd.app.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mkt.bocd.infrastructure.entity.Address;
-import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
+import com.mkt.bocd.domain.entity.Address;
 
 /**
  * @author manpoyang

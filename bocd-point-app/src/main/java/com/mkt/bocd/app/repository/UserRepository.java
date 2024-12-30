@@ -1,14 +1,9 @@
-package com.mkt.bocd.infrastructure.repository;
+package com.mkt.bocd.app.repository;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.repository.CrudRepository;
-import com.mkt.bocd.infrastructure.entity.User;
-import com.mkt.bocd.infrastructure.mapper.UserMapper;
+import com.mkt.bocd.domain.entity.User;
+import com.mkt.bocd.app.mapper.UserMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

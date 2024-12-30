@@ -1,12 +1,9 @@
-package com.mkt.bocd.infrastructure.repository;
+package com.mkt.bocd.app.repository;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.repository.CrudRepository;
-import com.mkt.bocd.infrastructure.entity.Address;
-import com.mkt.bocd.infrastructure.mapper.AddressMapper;
+import com.mkt.bocd.domain.entity.Address;
+import com.mkt.bocd.app.mapper.AddressMapper;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /**
  * @author manpoyang

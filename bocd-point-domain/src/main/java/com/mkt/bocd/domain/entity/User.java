@@ -1,4 +1,4 @@
-package com.mkt.bocd.infrastructure.entity;
+package com.mkt.bocd.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

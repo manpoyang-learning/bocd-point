@@ -1,8 +1,8 @@
 package com.mkt.bocd.domain.mapstruct;
 
 import com.mkt.bocd.domain.dto.UserWithAddressDTO;
-import com.mkt.bocd.infrastructure.entity.Address;
-import com.mkt.bocd.infrastructure.entity.User;
+import com.mkt.bocd.domain.entity.Address;
+import com.mkt.bocd.domain.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component

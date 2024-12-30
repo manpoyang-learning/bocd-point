@@ -3,14 +3,12 @@ package com.mkt.bocd.app.service.user;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mkt.bocd.domain.dto.UserWithAddressDTO;
 import com.mkt.bocd.domain.mapstruct.UserAddressMapper;
-import com.mkt.bocd.infrastructure.entity.Address;
-import com.mkt.bocd.infrastructure.entity.User;
-import com.mkt.bocd.infrastructure.repository.AddressRepository;
-import com.mkt.bocd.infrastructure.repository.UserRepository;
+import com.mkt.bocd.domain.entity.Address;
+import com.mkt.bocd.domain.entity.User;
+import com.mkt.bocd.app.repository.AddressRepository;
+import com.mkt.bocd.app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 
 /**

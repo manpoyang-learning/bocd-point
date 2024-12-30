@@ -1,9 +1,9 @@
-package com.mkt.bocd.infrastructure.repository.points;
+package com.mkt.bocd.app.repository.points;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.repository.CrudRepository;
-import com.mkt.bocd.infrastructure.entity.points.PointsAccount;
-import com.mkt.bocd.infrastructure.mapper.points.PointsAccountMapper;
+import com.mkt.bocd.domain.entity.points.PointsAccount;
+import com.mkt.bocd.app.mapper.points.PointsAccountMapper;
 import org.springframework.stereotype.Repository;
 
 /**
