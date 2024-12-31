@@ -17,15 +17,16 @@ import java.util.concurrent.TimeUnit;
  */
 @Repository
 public class PointsAccountRepository extends CrudRepository<PointsAccountMapper, PointsAccount> {
-    private final RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate; // 通过 @Autowired 注入
     private static final String POINTS_KEY_PREFIX = "points:account:";
     private static final long CACHE_TIMEOUT = 30L;
 
     // 添加构造器，处理父类的构造和RedisTemplate的注入
-    public PointsAccountRepository(PointsAccountMapper baseMapper, RedisTemplate<String, Object> redisTemplate) {
-        super();
-        this.redisTemplate = redisTemplate;
-    }
+//    public PointsAccountRepository(PointsAccountMapper baseMapper, RedisTemplate<String, Object> redisTemplate) {
+//        super();
+//        this.redisTemplate = redisTemplate;
+//    }
 
 
 
