@@ -35,6 +35,7 @@
         <lombok.version>1.18.24</lombok.version>
         <hutool.version>5.8.23</hutool.version>
         <fastjson2.version>2.0.40</fastjson2.version>
+        <jsonwebtoken.version>0.11.5</jsonwebtoken.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
@@ -103,6 +104,27 @@
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>2.13.5</version> <!-- 请使用与现有 Jackson 版本兼容的版本 -->
             </dependency>
+
+
+            <!-- JWT -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jsonwebtoken.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jsonwebtoken.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jsonwebtoken.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
 
 
 
